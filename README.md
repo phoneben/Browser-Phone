@@ -3,7 +3,7 @@ A fully featured browser based WebRTC Softphone phone for Asterisk or FreeSWITCH
 
 ### About Siperb
 Siperb provides both the [Softphone](https://www.siperb.com/kb/article/softphone/) and the [SIP to WebRTC Proxy](https://www.siperb.com/kb/article/webrtc-to-sip-proxy/) that sits in the cloud between your existing PBX and your users.
-Utilize your existing PBX to seamlessly integrate with the advanced [WebRTC](https://www.siperb.com/kb/article/what-is-webrtc/) capabilities we provide. At Siperb, we act as a proxy, bridging your current systems to our robust WebRTC client. This setup allows you the flexibility to connect with us directly or continue independently if your PBX is fully WebRTC capable. Choose the path that best suits your infrastructure needs. Learn more about Siperb
+Utilize your existing PBX to seamlessly integrate with the advanced [WebRTC](https://www.siperb.com/kb/article/what-is-webrtc/) capabilities we provide. At Siperb, we act as a proxy, bridging your current systems to our robust WebRTC client. This setup allows you the flexibility to connect with us directly or continue independently if your PBX is fully WebRTC capable. Choose the path that best suits your infrastructure needs. [Learn more about Siperb](https://www.siperb.com/)
 
 ## Browser Phone v4.0
 > [!NOTE]
