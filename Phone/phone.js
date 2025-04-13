@@ -1991,6 +1991,7 @@ function CreateUserAgent() {
     }
     if(WssInTransport){
         try{
+            // Note: In some versions of Asterisk we must be sent transport=ws, since it will respond with transport=WS in the contact
             options.contactParams.transport = "wss";
         } catch(e){}
     }
@@ -2123,6 +2124,9 @@ function onTransportConnectError(error){
 
     // Give it a second, and try to connect again
     window.setTimeout(function(){
+        userAgent.isReRegister = false;
+        userAgent.transport.attemptingReconnection = false;
+        // Try connect again.
         ReconnectTransport();
     }, 1000);
 }
