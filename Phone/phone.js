@@ -15,7 +15,7 @@
 
 // Global Settings
 // ===============
-const appversion = "0.3.29";
+const appversion = "0.3.31";
 const sipjsversion = "0.20.0";
 const navUserAgent = window.navigator.userAgent;  // TODO: change to Navigator.userAgentData
 const instanceID = String(Date.now());
