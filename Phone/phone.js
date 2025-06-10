@@ -2639,9 +2639,17 @@ function ReceiveCall(session) {
     // Browser Window Notification
     if ("Notification" in window) {
         if (Notification.permission === "granted") {
-            var noticeOptions = { body: lang.incoming_call_from +" " + callerID +" <"+ did +">", icon: getPicture(buddyObj.identity) }
+            var noticeOptions = { 
+                body: lang.incoming_call_from +" " + callerID +" <"+ did +">", 
+                icon: getPicture(buddyObj.identity) 
+            }
             var inComingCallNotification = new Notification(lang.incoming_call, noticeOptions);
             inComingCallNotification.onclick = function (event) {
+
+                // focus the window
+                console.log("Notification Clicked:", callerID, did);
+                event.preventDefault(); // prevent the browser from focusing the Notification's tab
+                window.focus();
 
                 var lineNo = lineObj.LineNumber;
                 var videoInvite = lineObj.SipSession.data.withvideo
@@ -4740,6 +4748,12 @@ function VoicemailNotify(notification){
 
                         var vmNotification = new Notification(lang.new_voice_mail, noticeOptions);
                         vmNotification.onclick = function (event) {
+
+                            // focus the window
+                            console.log("Notification Clicked: New Voicemail");
+                            event.preventDefault(); // prevent the browser from focusing the Notification's window
+                            window.focus();
+
                             if(VoicemailDid != ""){
                                 DialByLine("audio", null, VoicemailDid, lang.voice_mail);
                             }
@@ -5358,9 +5372,17 @@ function ActivateStream(buddyObj, message){
         if ("Notification" in window) {
             if (Notification.permission === "granted") {
                 var imageUrl = getPicture(buddyObj.identity);
-                var noticeOptions = { body: message.substring(0, 250), icon: imageUrl }
+                var noticeOptions = { 
+                    body: message.substring(0, 250), 
+                    icon: imageUrl 
+                }
                 var inComingChatNotification = new Notification(lang.message_from + " : " + buddyObj.CallerIDName, noticeOptions);
                 inComingChatNotification.onclick = function (event) {
+                    // Focus on the window
+                    console.log("Notification Clicked:", buddyObj.identity);
+                    event.preventDefault(); // prevent the browser from focusing the Notification's window
+                    window.focus();
+
                     // Show Message
                     SelectBuddy(buddyObj.identity);
                 }
