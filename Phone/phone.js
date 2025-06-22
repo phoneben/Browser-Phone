@@ -29,7 +29,7 @@ welcomeScreen += "==============================================================
 welcomeScreen += "\n";
 welcomeScreen += "                            NO WARRANTY\n";
 welcomeScreen += "\n";
-welcomeScreen += "BECAUSE THE PROGRAM IS LICENSED EE OF CHARGE, THERE IS NO WARRANTY\n";
+welcomeScreen += "BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY\n";
 welcomeScreen += "FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN\n";
 welcomeScreen += "OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES\n";
 welcomeScreen += "PROVIDE THE PROGRAM \"AS IS\" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED\n";
